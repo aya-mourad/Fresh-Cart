@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useFormik } from 'formik'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 export default function Signin() {
 
@@ -75,6 +76,7 @@ export default function Signin() {
                     </div> : ''}
 
                     <button disabled={!(login.isValid && login.dirty)} type='submit' className='btn bg-main text-white'>Signin</button>
+                    <Link to={'/forgetPassword'}> <h4 className='mt-3'>Forgot Password?</h4></Link>
                 </form>
             </div>
         </div>
